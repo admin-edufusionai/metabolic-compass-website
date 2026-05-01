@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EdufusionAI | The Metabolic Compass</title>
+    <style>
+        :root {
+            --primary-navy: #0A192F;
+            --secondary-blue: #172A45;
+            --accent-teal: #64FFDA;
+            --text-light: #CCD6F6;
+            --text-slate: #8892B0;
+            --bg-white: #F8F9FA;
+        }
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-white);
+            color: var(--primary-navy);
+            line-height: 1.6;
+        }
+        header {
+            background-color: var(--primary-navy);
+            color: var(--accent-teal);
+            padding: 1.5rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        header h1 { margin: 0; font-size: 1.8rem; letter-spacing: 1px; }
+        nav a {
+            color: var(--text-light);
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+        nav a:hover { color: var(--accent-teal); }
+        section { padding: 5rem 10%; border-bottom: 1px solid #E0E0E0; }
+        .hero {
+            background-color: var(--secondary-blue);
+            color: var(--text-light);
+            text-align: center;
+        }
+        .hero h2 { font-size: 2.5rem; color: var(--accent-teal); margin-bottom: 1rem; }
+        .hero p { font-size: 1.2rem; color: var(--text-slate); max-width: 800px; margin: 0 auto 2rem; }
+        .hero img { max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+        .card {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+        h3 { color: var(--primary-navy); font-size: 1.8rem; border-left: 4px solid var(--accent-teal); padding-left: 15px; }
+        ul { list-style-type: square; padding-left: 20px; color: var(--text-slate); }
+        li { margin-bottom: 10px; }
+        .highlight { color: var(--accent-teal); font-weight: bold; }
+        .btn {
+            display: inline-block;
+            background: var(--accent-teal);
+            color: var(--primary-navy);
+            padding: 10px 25px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 4px;
+            margin-top: 20px;
+        }
+        footer {
+            background-color: var(--primary-navy);
+            color: var(--text-slate);
+            text-align: center;
+            padding: 2rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>EdufusionAI</h1>
+        <nav>
+            <a href="#platform">The Digital Twin</a>
+            <a href="#infrastructure">VDI & Interoperability</a>
+            <a href="#clinical">Clinical Rigor</a>
+            <a href="#roi">B2G Procurement & ROI</a>
+            <a href="#capacity">Institutional Capacity</a>
+        </nav>
+    </header>
+
+    <section id="platform" class="hero">
+        <h2>The Metabolic Compass: Active Metabolic Engineering</h2>
+        <p>Bridging the "Ignorance Gap." We are building a Human-AI "Centaur" Partnership. EdufusionAI acts as the software patch that formalizes N-of-1 biological feedback into a highly scalable, predictive Metabolic Digital Twin.</p>
+        <!-- Referencing the generated infographic asset -->
+        <img src="the_in-silico_loop.png" alt="The In-Silico Decision Loop: Predictive Metabolic Engineering">
+    </section>
+
+    <section id="infrastructure" class="grid-2">
+        <div>
+            <h3>Enterprise-Grade Interoperability & VDI</h3>
+            <p>Moving beyond retrospective tracking. Our architecture simulates the metabolic debt of dietary choices before consumption, serving as a preemptive cognitive guardrail.</p>
+            <ul>
+                <li><strong>Visual Data Ingestion (VDI):</strong> Powered by a YOLO object detection backbone and MLP predictive inference.</li>
+                <li><strong>Patient-Facing API:</strong> Seamless biometric ingestion via Apple HealthKit and Google Fit.</li>
+                <li><strong>Clinical Interoperability:</strong> FHIR-compliant API modules pushing structured Observation and DiagnosticReport resources directly to Electronic Health Record (EHR) systems.</li>
+            </ul>
+        </div>
+        <div class="card">
+            <h4>The Software Patch</h4>
+            <p>Health is an engineering project. Our platform dynamically adjusts to real-time inputs to stabilize the insulin-sodium-water axis, eliminating postprandial somnolence and preserving cognitive capital.</p>
+        </div>
+    </section>
+
+    <section id="clinical" class="grid-2">
+        <div class="card">
+            <h4>Beyond the BMI Fallacy</h4>
+            <p>Generic calorie deficits are mathematically flawed. We actively target hyperinsulinemia to deactivate the NHE3 exchanger, intercepting pre-diabetes and macrovascular damage.</p>
+        </div>
+        <div>
+            <h3>Rigorous Clinical Methodology</h3>
+            <ul>
+                <li><strong>The Insulin-Sodium-Water Axis:</strong> Reversing systemic edema and vascular inflammation via precision metabolic modeling.</li>
+                <li><strong>Dynamic 185cm W2HR Calibration:</strong> Utilizing Waist-to-Height Ratio (W2HR) as the primary KPI for central adiposity risk, rather than outdated BMI metrics.</li>
+                <li><strong>The "Glucose Sink":</strong> Intelligent post-prandial resistance training triggers to force peripheral glucose uptake.</li>
+                <li><strong>Clinical Target:</strong> Driving HOMA-IR below 2.0 (Target: 1.5).</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="roi">
+        <h3>Public Procurement: The Economics of Prevention</h3>
+        <p>The South African public sector faces a catastrophic burden from late-stage Type 2 Diabetes complications. The cost of inaction is biologically and economically unsustainable.</p>
+        <div class="grid-2">
+            <div class="card">
+                <h4 style="color: #d32f2f;">The Cost of Inaction</h4>
+                <p>Treating End-Stage Renal Disease (ESRD) via public sector dialysis costs the fiscus <strong>R200,000 to R400,000</strong> per patient, annually.</p>
+            </div>
+            <div class="card">
+                <h4 style="color: #388e3c;">The Cost of Prevention</h4>
+                <p>Early-stage screening and active digital intervention via the Metabolic Compass costs a fraction of this burden (<strong>R1,500 - R3,500</strong>), scaling primary care by automating triage.</p>
+            </div>
+        </div>
+        <a href="#contact" class="btn">Request Enterprise Integration Spec</a>
+    </section>
+
+    <section id="capacity" class="hero" style="background-color: var(--primary-navy);">
+        <h2 style="color: var(--text-light);">Engineering Cognitive Capital</h2>
+        <p>A universal framework for researcher resilience and high-level institutional capacity development.</p>
+        <div class="grid-2" style="text-align: left; color: var(--text-light);">
+            <ul>
+                <li><span class="highlight">Tier 1: Low-Fidelity PoC:</span> Prototyping a SaaS-based application to monitor professional resilience.</li>
+                <li><span class="highlight">Tier 2: Integrative Research:</span> Formalising molecular biology insights into academic currency and peer-reviewed publications.</li>
+                <li><span class="highlight">Tier 3: 4IR Exemplar:</span> Establishing a repeatable model for how 4IR tools (AI and Digitalisation) can be synthesized into a support framework for high-level capacity development.</li>
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 EdufusionAI. Scalable 4IR Interoperability & Metabolic Engineering.</p>
+    </footer>
+
+</body>
+</html>
