@@ -1,2 +1,2 @@
 # metabolic-compass-website
-Metabolic Compass is current focus
+Metabolic Compass is the current focus
