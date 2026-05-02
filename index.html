@@ -87,7 +87,7 @@
         font-size: 1.05rem;
         color: var(--text-slate);
         max-width: 800px;
-        margin: 0 auto 2rem;
+        margin: 0 auto 1.25rem;
     }
 
     .hero img {
@@ -95,7 +95,7 @@
         height: auto;
         border-radius: 8px;
         box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-        margin-top: 1.5rem;
+        margin-top: 1.25rem;
     }
 
     .grid-2 {
@@ -149,6 +149,8 @@
         font-weight: bold;
         border-radius: 4px;
         margin-top: 20px;
+        min-height: 44px;
+        line-height: 1.2;
     }
 
     .btn:hover {
@@ -161,6 +163,11 @@
         text-align: center;
         padding: 1.75rem;
         font-size: 0.9rem;
+    }
+
+    /* Ensure anchor jumps leave space for the sticky header */
+    [id] {
+        scroll-margin-top: 80px;
     }
 
     /* --- Mobile & tablet responsiveness --- */
@@ -235,11 +242,15 @@
         ul {
             padding-left: 18px;
         }
-    [id] {
-        scroll-margin-top: 80px;
+
+        /* On very small phones, disable sticky header if needed */
+        @media (max-width: 450px) {
+            header {
+                position: static;
+            }
         }
     }
-</style>
+    </style>
 </head>
 <body>
 
@@ -256,15 +267,16 @@
 
     <section id="platform" class="hero">
         <h2>The Metabolic Compass: Active Metabolic Engineering</h2>
-        <p>Bridging the "Ignorance Gap." We are building a Human-AI "Centaur" Partnership. EdufusionAI acts as the software patch that formalizes N-of-1 biological feedback into a highly scalable, predictive Metabolic Digital Twin.</p>
-        <!-- Referencing the generated infographic asset -->
+        <p>We are building a Human–AI “Centaur” partnership for metabolic engineering.</p>
+        <p>EdufusionAI acts as a software patch that formalizes N-of-1 biological feedback into a scalable, predictive Metabolic Digital Twin.</p>
+        <a href="#contact" class="btn">Talk to the Founding Team</a>
         <img src="the-in-silico-loop.jpg" alt="The In-Silico Decision Loop: Predictive Metabolic Engineering">
     </section>
 
     <section id="infrastructure" class="grid-2">
         <div>
             <h3>Enterprise-Grade Interoperability & VDI</h3>
-            <p>Moving beyond retrospective tracking. Our architecture simulates the metabolic debt of dietary choices before consumption, serving as a preemptive cognitive guardrail.</p>
+            <p><strong>Simulate metabolic debt before it happens.</strong> Our architecture moves beyond retrospective tracking and acts as a preemptive cognitive guardrail.</p>
             <ul>
                 <li><strong>Visual Data Ingestion (VDI):</strong> Powered by a YOLO object detection backbone and MLP predictive inference.</li>
                 <li><strong>Patient-Facing API:</strong> Seamless biometric ingestion via Apple HealthKit and Google Fit.</li>
@@ -287,7 +299,7 @@
             <ul>
                 <li><strong>The Insulin-Sodium-Water Axis:</strong> Reversing systemic edema and vascular inflammation via precision metabolic modeling.</li>
                 <li><strong>Dynamic 185cm W2HR Calibration:</strong> Utilizing Waist-to-Height Ratio (W2HR) as the primary KPI for central adiposity risk, rather than outdated BMI metrics.</li>
-                <li><strong>The "Glucose Sink":</strong> Intelligent post-prandial resistance training triggers to force peripheral glucose uptake.</li>
+                <li><strong>The “Glucose Sink”:</strong> Intelligent post-prandial resistance training triggers to force peripheral glucose uptake.</li>
                 <li><strong>Clinical Target:</strong> Driving HOMA-IR below 2.0 (Target: 1.5).</li>
             </ul>
         </div>
@@ -295,18 +307,24 @@
 
     <section id="roi">
         <h3>Public Procurement: The Economics of Prevention</h3>
-        <p>The South African public sector faces a catastrophic burden from late-stage Type 2 Diabetes complications. The cost of inaction is biologically and economically unsustainable.</p>
+        <p><strong>Quantifying the cost of doing nothing versus scaled digital prevention.</strong> The South African public sector faces a catastrophic burden from late-stage Type 2 Diabetes complications.</p>
         <div class="grid-2">
             <div class="card">
                 <h4 style="color: #d32f2f;">The Cost of Inaction</h4>
-                <p>Treating End-Stage Renal Disease (ESRD) via public sector dialysis costs the fiscus <strong>R200,000 to R400,000</strong> per patient, annually.</p>
+                <p>
+                    Treating End-Stage Renal Disease (ESRD) via public sector dialysis costs the fiscus
+                    <strong>R200,000 – R400,000 per patient per year</strong>.
+                </p>
             </div>
             <div class="card">
                 <h4 style="color: #388e3c;">The Cost of Prevention</h4>
-                <p>Early-stage screening and active digital intervention via the Metabolic Compass costs a fraction of this burden (<strong>R1,500 - R3,500</strong>), scaling primary care by automating triage.</p>
+                <p>
+                    Early-stage screening and active digital intervention via the Metabolic Compass costs a fraction of this burden
+                    (<strong>R1,500 – R3,500 per person</strong>), scaling primary care by automating triage.
+                </p>
             </div>
         </div>
-        <a href="#contacts" class="btn">Request Enterprise Integration Spec</a>
+        <a href="#contact" class="btn">Request Integration Spec</a>
     </section>
 
     <section id="capacity" class="hero" style="background-color: var(--primary-navy);">
@@ -319,6 +337,12 @@
                 <li><span class="highlight">Tier 3: 4IR Exemplar:</span> Establishing a repeatable model for how 4IR tools (AI and Digitalisation) can be synthesized into a support framework for high-level capacity development.</li>
             </ul>
         </div>
+    </section>
+
+    <section id="contact">
+        <h3>Contact the Founding Team</h3>
+        <p>Share your institutional context, and we will follow up with a tailored integration and evaluation roadmap.</p>
+        <p>Email: <a href="mailto:info@edufusionai.co.za">info@edufusionai.co.za</a></p>
     </section>
 
     <footer>
