@@ -5,84 +5,241 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EdufusionAI | The Metabolic Compass</title>
     <style>
-        :root {
-            --primary-navy: #0A192F;
-            --secondary-blue: #172A45;
-            --accent-teal: #64FFDA;
-            --text-light: #CCD6F6;
-            --text-slate: #8892B0;
-            --bg-white: #F8F9FA;
-        }
-        body {
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: var(--bg-white);
-            color: var(--primary-navy);
-            line-height: 1.6;
-        }
+    :root {
+        --primary-navy: #0A192F;
+        --secondary-blue: #172A45;
+        --accent-teal: #64FFDA;
+        --text-light: #CCD6F6;
+        --text-slate: #8892B0;
+        --bg-white: #F8F9FA;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: var(--bg-white);
+        color: var(--primary-navy);
+        line-height: 1.6;
+    }
+
+    header {
+        background-color: var(--primary-navy);
+        color: var(--accent-teal);
+        padding: 1rem 4%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+
+    header h1 {
+        margin: 0;
+        font-size: 1.4rem;
+        letter-spacing: 0.5px;
+        white-space: nowrap;
+    }
+
+    nav {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+    }
+
+    nav a {
+        color: var(--text-light);
+        text-decoration: none;
+        font-size: 0.9rem;
+        font-weight: 600;
+        transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+        color: var(--accent-teal);
+    }
+
+    section {
+        padding: 3.5rem 8%;
+        border-bottom: 1px solid #E0E0E0;
+    }
+
+    .hero {
+        background-color: var(--secondary-blue);
+        color: var(--text-light);
+        text-align: center;
+    }
+
+    .hero h2 {
+        font-size: 2.1rem;
+        color: var(--accent-teal);
+        margin-bottom: 1rem;
+    }
+
+    .hero p {
+        font-size: 1.05rem;
+        color: var(--text-slate);
+        max-width: 800px;
+        margin: 0 auto 2rem;
+    }
+
+    .hero img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        margin-top: 1.5rem;
+    }
+
+    .grid-2 {
+        display: grid;
+        grid-template-columns: 1.1fr 1fr;
+        gap: 3rem;
+        align-items: flex-start;
+    }
+
+    .card {
+        background: white;
+        padding: 1.75rem;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    }
+
+    h3 {
+        color: var(--primary-navy);
+        font-size: 1.7rem;
+        border-left: 4px solid var(--accent-teal);
+        padding-left: 15px;
+        margin-top: 0;
+    }
+
+    h4 {
+        margin-top: 0;
+    }
+
+    ul {
+        list-style-type: square;
+        padding-left: 20px;
+        color: var(--text-slate);
+        margin-top: 0.5rem;
+    }
+
+    li {
+        margin-bottom: 10px;
+    }
+
+    .highlight {
+        color: var(--accent-teal);
+        font-weight: bold;
+    }
+
+    .btn {
+        display: inline-block;
+        background: var(--accent-teal);
+        color: var(--primary-navy);
+        padding: 10px 25px;
+        text-decoration: none;
+        font-weight: bold;
+        border-radius: 4px;
+        margin-top: 20px;
+    }
+
+    .btn:hover {
+        filter: brightness(0.95);
+    }
+
+    footer {
+        background-color: var(--primary-navy);
+        color: var(--text-slate);
+        text-align: center;
+        padding: 1.75rem;
+        font-size: 0.9rem;
+    }
+
+    /* --- Mobile & tablet responsiveness --- */
+
+    @media (max-width: 900px) {
         header {
-            background-color: var(--primary-navy);
-            color: var(--accent-teal);
-            padding: 1.5rem 5%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
+            padding: 0.75rem 5%;
         }
-        header h1 { margin: 0; font-size: 1.8rem; letter-spacing: 1px; }
+
+        header h1 {
+            font-size: 1.2rem;
+        }
+
+        nav {
+            gap: 0.75rem;
+        }
+
         nav a {
-            color: var(--text-light);
-            text-decoration: none;
-            margin-left: 20px;
-            font-weight: 600;
-            transition: color 0.3s ease;
+            font-size: 0.8rem;
         }
-        nav a:hover { color: var(--accent-teal); }
-        section { padding: 5rem 10%; border-bottom: 1px solid #E0E0E0; }
-        .hero {
-            background-color: var(--secondary-blue);
-            color: var(--text-light);
-            text-align: center;
+
+        section {
+            padding: 2.5rem 6%;
         }
-        .hero h2 { font-size: 2.5rem; color: var(--accent-teal); margin-bottom: 1rem; }
-        .hero p { font-size: 1.2rem; color: var(--text-slate); max-width: 800px; margin: 0 auto 2rem; }
-        .hero img { max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+
         .grid-2 {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            align-items: center;
+            grid-template-columns: 1fr;
+            gap: 2rem;
         }
+
+        .hero h2 {
+            font-size: 1.7rem;
+        }
+
+        .hero p {
+            font-size: 1rem;
+        }
+    }
+
+    @media (max-width: 600px) {
+        header {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 0.5rem;
+        }
+
+        nav {
+            justify-content: flex-start;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            font-size: 0.78rem;
+        }
+
+        section {
+            padding: 2rem 5%;
+        }
+
+        .hero h2 {
+            font-size: 1.4rem;
+        }
+
+        .hero p {
+            font-size: 0.95rem;
+        }
+
         .card {
-            background: white;
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            padding: 1.4rem;
         }
-        h3 { color: var(--primary-navy); font-size: 1.8rem; border-left: 4px solid var(--accent-teal); padding-left: 15px; }
-        ul { list-style-type: square; padding-left: 20px; color: var(--text-slate); }
-        li { margin-bottom: 10px; }
-        .highlight { color: var(--accent-teal); font-weight: bold; }
-        .btn {
-            display: inline-block;
-            background: var(--accent-teal);
-            color: var(--primary-navy);
-            padding: 10px 25px;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 4px;
-            margin-top: 20px;
+
+        ul {
+            padding-left: 18px;
         }
-        footer {
-            background-color: var(--primary-navy);
-            color: var(--text-slate);
-            text-align: center;
-            padding: 2rem;
+    [id] {
+        scroll-margin-top: 80px;
         }
-    </style>
+    }
+</style>
 </head>
 <body>
 
@@ -149,7 +306,7 @@
                 <p>Early-stage screening and active digital intervention via the Metabolic Compass costs a fraction of this burden (<strong>R1,500 - R3,500</strong>), scaling primary care by automating triage.</p>
             </div>
         </div>
-        <a href="#contact" class="btn">Request Enterprise Integration Spec</a>
+        <a href="#contacts" class="btn">Request Enterprise Integration Spec</a>
     </section>
 
     <section id="capacity" class="hero" style="background-color: var(--primary-navy);">
