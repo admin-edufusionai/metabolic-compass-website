@@ -30,13 +30,24 @@
     header {
         background-color: var(--primary-navy);
         color: var(--accent-teal);
-        padding: 1rem 4%;
+        padding: 0.75rem 4%;
         display: flex;
         justify-content: space-between;
         align-items: center;
         position: sticky;
         top: 0;
         z-index: 1000;
+    }
+
+    .brand {
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+    }
+
+    .brand img {
+        height: 40px;
+        width: auto;
     }
 
     header h1 {
@@ -90,7 +101,13 @@
         margin: 0 auto 1.25rem;
     }
 
-    .hero img {
+    .hero img.hero-logo {
+        height: 56px;
+        width: auto;
+        margin-bottom: 1rem;
+    }
+
+    .hero img.hero-figure {
         max-width: 100%;
         height: auto;
         border-radius: 8px;
@@ -181,6 +198,10 @@
             font-size: 1.2rem;
         }
 
+        .brand img {
+            height: 34px;
+        }
+
         nav {
             gap: 0.75rem;
         }
@@ -242,12 +263,11 @@
         ul {
             padding-left: 18px;
         }
+    }
 
-        /* On very small phones, disable sticky header if needed */
-        @media (max-width: 450px) {
-            header {
-                position: static;
-            }
+    @media (max-width: 450px) {
+        header {
+            position: static;
         }
     }
     </style>
@@ -255,7 +275,10 @@
 <body>
 
     <header>
-        <h1>EdufusionAI</h1>
+        <div class="brand">
+            <img src="edufusionlogo.png" alt="EdufusionAI logo">
+            <h1>EdufusionAI</h1>
+        </div>
         <nav>
             <a href="#platform">The Digital Twin</a>
             <a href="#infrastructure">VDI & Interoperability</a>
@@ -266,11 +289,16 @@
     </header>
 
     <section id="platform" class="hero">
+        <img src="edufusionlogo.png"
+             alt="EdufusionAI logo"
+             class="hero-logo">
         <h2>The Metabolic Compass: Active Metabolic Engineering</h2>
-        <p>We are building a Human–AI “Centaur” partnership for metabolic engineering.</p>
+        <p>We are building a Human–AI “Centaur” partnership to experimentalise metabolic health in real-world settings.</p>
         <p>EdufusionAI acts as a software patch that formalizes N-of-1 biological feedback into a scalable, predictive Metabolic Digital Twin.</p>
-        <a href="#contact" class="btn">Talk to the Founding Team</a>
-        <img src="the-in-silico-loop.jpg" alt="The In-Silico Decision Loop: Predictive Metabolic Engineering">
+        <a href="#contact" class="btn">Explore Research Collaboration</a>
+        <img src="the-in-silico-loop.jpg"
+             alt="The In-Silico Decision Loop: Predictive Metabolic Engineering"
+             class="hero-figure">
     </section>
 
     <section id="infrastructure" class="grid-2">
@@ -307,7 +335,7 @@
 
     <section id="roi">
         <h3>Public Procurement: The Economics of Prevention</h3>
-        <p><strong>Quantifying the cost of doing nothing versus scaled digital prevention.</strong> The South African public sector faces a catastrophic burden from late-stage Type 2 Diabetes complications.</p>
+        <p><strong>Co-develop an evidence base for metabolic prevention.</strong> The South African public sector faces a catastrophic burden from late-stage Type 2 Diabetes complications; we want partners to help quantify the impact of early intervention.</p>
         <div class="grid-2">
             <div class="card">
                 <h4 style="color: #d32f2f;">The Cost of Inaction</h4>
@@ -324,24 +352,25 @@
                 </p>
             </div>
         </div>
-        <a href="#contact" class="btn">Request Integration Spec</a>
+        <a href="#contact" class="btn">Discuss B2G Pilot Design</a>
     </section>
 
     <section id="capacity" class="hero" style="background-color: var(--primary-navy);">
         <h2 style="color: var(--text-light);">Engineering Cognitive Capital</h2>
-        <p>A universal framework for researcher resilience and high-level institutional capacity development.</p>
+        <p>A universal framework for researcher resilience, lab productivity, and institutional capacity development.</p>
         <div class="grid-2" style="text-align: left; color: var(--text-light);">
             <ul>
                 <li><span class="highlight">Tier 1: Low-Fidelity PoC:</span> Prototyping a SaaS-based application to monitor professional resilience.</li>
-                <li><span class="highlight">Tier 2: Integrative Research:</span> Formalising molecular biology insights into academic currency and peer-reviewed publications.</li>
+                <li><span class="highlight">Tier 2: Integrative Research:</span> Translating molecular and metabolic insights into trial protocols, grant proposals, and peer-reviewed output.</li>
                 <li><span class="highlight">Tier 3: 4IR Exemplar:</span> Establishing a repeatable model for how 4IR tools (AI and Digitalisation) can be synthesized into a support framework for high-level capacity development.</li>
             </ul>
         </div>
     </section>
 
     <section id="contact">
-        <h3>Contact the Founding Team</h3>
-        <p>Share your institutional context, and we will follow up with a tailored integration and evaluation roadmap.</p>
+        <h3>Join the Metabolic Compass Research Network</h3>
+        <p>We are seeking collaborators and funders to stress test the protocol in real-world cohorts, refine the Metabolic Digital Twin, and generate publishable evidence for scaled deployment.</p>
+        <p>If you are leading a clinical, public health, or data science programme and would like to explore a joint pilot or grant proposal, we’d like to hear from you.</p>
         <p>Email: <a href="mailto:info@edufusionai.co.za">info@edufusionai.co.za</a></p>
     </section>
 
